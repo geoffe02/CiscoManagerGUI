@@ -22,9 +22,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DeviceConnectHandler.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="ciscoScraper\__init__.py">
       <SubType>Code</SubType>
     </Compile>
@@ -42,7 +39,7 @@
     <Compile Include="interfaceGUI\window_interface.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ciscoScraper\CiscoConnectHandler.py" />
+    <Compile Include="CiscoConnectHandler.py" />
     <Compile Include="main.py">
       <SubType>Code</SubType>
     </Compile>
