@@ -17,7 +17,7 @@ import deviceCiscoModel
 targetDevice=deviceCiscoModel.deviceCiscoModel
 ipaddressText="null"
 
-def openNewWindow(targetDevice):
+def openNewWindow(self,targetDevice):
     newWindow = Toplevel(self)
     newWindow.title("Manage new Cisco device")
     newWindow.geometry("500x500")
@@ -91,55 +91,55 @@ def buttonSetIPAddr_onClick(ipaddressText):
 
 
 
-def buttonClick1():
+def buttonClick1(self):
     targetDevice.deviceShowIPARP(targetDevice)
     self.textboxOutput.insert(1.0, targetDevice.showOutput(targetDevice))
     print("Button Clicked!")
 
-def buttonClick2():
+def buttonClick2(self):
     self.textboxOutput.delete('1.0',END)
 
 ## End of Definitions/Methods ##
 
-self = tk.Tk()
-self.geometry('1000x800')
-self.title('Cisco Device Manager GUI')
+# self = tk.Tk()
+# self.geometry('1000x800')
+# self.title('Cisco Device Manager GUI')
 
 
 
-# Set up upper Menu bar
-menubar = Menu(self)
-Open = Menu(menubar)
-menubar.add_cascade(label='Open', menu=Open)
-Open.add_command(label='New Device',accelerator="Ctrl_N",command=lambda: openNewWindow(targetDevice))
-Open.add_separator()
-Open.add_command(label='Close and Quit',command=self.destroy)
+# # Set up upper Menu bar
+# menubar = Menu(self)
+# Open = Menu(menubar)
+# menubar.add_cascade(label='Open', menu=Open)
+# Open.add_command(label='New Device',accelerator="Ctrl_N",command=lambda: openNewWindow(targetDevice))
+# Open.add_separator()
+# Open.add_command(label='Close and Quit',command=self.destroy)
 
 
 
 
-# Set of Buttons and Text Boxes
+# # Set of Buttons and Text Boxes
 
-Label(self, text="No Device Selected", font= ('Helvetica 15 underline'),
-background="gray74").pack(pady=20, side= TOP, anchor="w")
+# Label(self, text="No Device Selected", font= ('Helvetica 15 underline'),
+# background="gray74").pack(pady=20, side= TOP, anchor="w")
 
-buttonShowIPARP=Button(self, text='Show IP ARP',bd=5,command=buttonClick1)
-buttonShowIPARP.pack(side='top')
-
-
-
-buttonClear=Button(self,text='Clear',bd=5,command=buttonClick2)
-buttonClear.pack(side='bottom')
+# buttonShowIPARP=Button(self, text='Show IP ARP',bd=5,command=buttonClick1)
+# buttonShowIPARP.pack(side='top')
 
 
 
-self.config(menu=menubar)
-self.textboxOutput = tk.Text(self, height=30, font=('Arial',16))
-
-self.textboxOutput.pack(padx=10, pady=10)
+# buttonClear=Button(self,text='Clear',bd=5,command=buttonClick2)
+# buttonClear.pack(side='bottom')
 
 
-self.mainloop()
+
+# self.config(menu=menubar)
+# self.textboxOutput = tk.Text(self, height=30, font=('Arial',16))
+
+# self.textboxOutput.pack(padx=10, pady=10)
+
+
+# self.mainloop()
 
 
 
