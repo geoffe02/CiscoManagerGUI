@@ -31,6 +31,9 @@
     <Compile Include="deviceModel\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="fileHandler.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="interfaceGUI\my_GUI-ttk.py" />
     <Compile Include="CiscoManagerGUI.py" />
     <Compile Include="interfaceGUI\__init__.py">
